@@ -32,15 +32,13 @@ public class Library
         }
     }
 
-    public void searchByauthor(String author)
-    {
+    public void searchByauthor(String author)    {
         Iterator<Book> iterator = books.iterator();
         while (iterator.hasNext())
         {
             Book book = iterator.next();
             if (book.getAuthor().equals(author))
             {
-                iterator.remove();
                 System.out.println("Search is complete:" + book);
                 return;
             }
