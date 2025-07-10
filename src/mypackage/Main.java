@@ -9,7 +9,7 @@ public class Main
         Library library = new Library();
         Scanner scan = new Scanner(System.in);
         library.listAllBooks();
-        loop_label: while (true)
+        while (true)
         {
             System.out.println("\nLibrary");
             System.out.println("1. Add Book:");
@@ -46,10 +46,11 @@ public class Main
                     break;
                 default:
                     System.out.println("Invalid option. Please try again.");
-                    break loop_label;
+                    break ;
             }
+            scan.close();
         }
-        scan.close();
+
     }
 
     private static Book enterBookDetails(Scanner scan)
