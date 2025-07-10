@@ -9,7 +9,7 @@ public class Main
         Library library = new Library();
         Scanner scan = new Scanner(System.in);
         library.listAllBooks();
-        while (true)
+        loop_label: while (true)
         {
             System.out.println("\nLibrary");
             System.out.println("1. Add Book:");
@@ -46,11 +46,11 @@ public class Main
                     break;
                 default:
                     System.out.println("Invalid option. Please try again.");
-                    break ;
-            }
-            scan.close();
-        }
+                    break loop_label;
 
+            }
+        }
+        scan.close();
     }
 
     private static Book enterBookDetails(Scanner scan)
@@ -65,4 +65,5 @@ public class Main
         int yr = scan.nextInt();
         return new Book(title, author, isbn, yr);
     }
+
 }
