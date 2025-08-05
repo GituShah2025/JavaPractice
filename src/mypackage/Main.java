@@ -29,8 +29,17 @@ public class Main
                     library.addBook(book2);
                     library.addBook(book3);
                     library.addBook(book4);
-                    library.addBook(enterBookDetails(scan));
-                    break;
+                    System.out.print("Add books? Y/N: ");
+                    String ans = scan.nextLine();
+                    if(ans.equalsIgnoreCase("Y")) {
+                        library.addBook(enterBookDetails(scan));
+                        break;
+                    }
+                    else
+                    {
+                        System.out.print("You have selected N so books are not added");
+                        String bksNo = scan.nextLine();
+                    }
                 case 2:
                     library.listAllBooks();
                     break;
