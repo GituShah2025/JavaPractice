@@ -11,7 +11,7 @@ public class Library
     {
         if(books.contains(book))
         {
-            System.out.println("Book cannot be added");
+            System.out.println("Book with same Title already exist");
         }
         else
         {
