@@ -9,8 +9,15 @@ public class Library
 
     public void addBook(Book book)
     {
-        books.add(book);
-        System.out.println("Book is added:" + book);
+        if(books.contains(book))
+        {
+            System.out.println("Book cannot be added");
+        }
+        else
+        {
+            books.add(book);
+            System.out.println("Book is added:" + book);
+        }
     }
 
     public void removeBook(String title)
